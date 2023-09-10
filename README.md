@@ -8,11 +8,6 @@ A boilerplate project that combines Laravel 10 with Inertia.js and React for rap
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
