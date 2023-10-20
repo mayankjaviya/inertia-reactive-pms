@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -12,14 +13,16 @@ class TaskController extends Controller
     public function index(){
 
 
-        $tasks = Task::select(['id', 'title', 'description', 'order', 'completed', 'section']);
+        $tasks = Task::with('type:id,name,color')->select(['id', 'title', 'description', 'order', 'completed', 'section','type_id']);
         $allTasks = $tasks->get();
+        $types = Type::all();
         $currentTasks = $allTasks->where('completed',false)->groupBy('section')->toArray();
         $completedTasks = $tasks->where('completed',1)->get()->toArray();
 
-        return Inertia::render('Todo/Todo', [
+        return Inertia::render('Todo/Main', [
             'tasks' => $currentTasks,
-            'completedTasks' => $completedTasks
+            'completedTasks' => $completedTasks,
+            'types' => $types
         ]);
     }
 
@@ -47,5 +50,13 @@ class TaskController extends Controller
         Task::find($id)->delete();
 
         return to_route('todo.index');
+    }
+
+    public function assetsIndex(){
+
+        $types = Type::withCount('tasks')->get();
+        return Inertia::render('Assets/Assets', [
+            'types' => $types
+        ]);
     }
 }

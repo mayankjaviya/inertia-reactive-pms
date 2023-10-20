@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,6 @@ Route::get('/todo', [TaskController::class,'index'])->name('todo.index');
 Route::post('/todo', [TaskController::class,'store'])->name('todo.store');
 Route::put('/todo/{id}', [TaskController::class,'update'])->name('todo.update');
 Route::delete('/todo/{id}', [TaskController::class,'destroy'])->name('todo.destroy');
+
+Route::get('/assets',[TaskController::class,'assetsIndex'])->name('assets.index');
+Route::post('/types',[TypeController::class,'store'])->name('types.store');

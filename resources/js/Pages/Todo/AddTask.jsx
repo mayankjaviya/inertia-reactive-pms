@@ -1,6 +1,5 @@
 import { router } from "@inertiajs/react";
 import React, { useState } from "react";
-import {AllSection} from "../Keys.jsx"
 
 export default function AddTask(props) {
     const { section,hideNewTaskCard } = props;
@@ -9,7 +8,7 @@ export default function AddTask(props) {
         hideNewTaskCard();
         router.post('/todo', {
             title:task,
-            section : AllSection[section]
+            section : section
         });
     }
 
