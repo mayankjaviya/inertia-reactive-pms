@@ -15,5 +15,11 @@ class Task extends Model
         'order',
         'completed',
         'section',
+        'type_id'
     ];
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }
