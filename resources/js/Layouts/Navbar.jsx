@@ -4,7 +4,7 @@ import React from "react";
 export default function Navbar() {
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <nav className="navbar navbar-expand-lg navbar-light sticky-top">
             <div className="container-fluid">
                 <a className="navbar-brand fs-3" href="/todo">
                     Inertia Reactive PMS

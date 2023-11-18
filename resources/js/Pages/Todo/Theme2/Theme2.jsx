@@ -13,7 +13,7 @@ export default function Theme2(props) {
     } = props;
     return (
         <div className="row">
-            <div className="w-25 px-1 ">
+            <div className="col-sm-3 px-1 ">
                 <Sections
                     tasks={tasks}
                     setDraggedTaskId={setDraggedTaskId}
@@ -23,7 +23,7 @@ export default function Theme2(props) {
                     onDrop={onDrop}
                 />
             </div>
-            <div className="w-25 px-1">
+            <div className="col-sm-3 px-1">
                 <Sections
                     tasks={tasks}
                     setDraggedTaskId={setDraggedTaskId}
@@ -33,7 +33,7 @@ export default function Theme2(props) {
                     onDrop={onDrop}
                 />
             </div>
-            <div className="w-25 px-1">
+            <div className="col-sm-3 px-1">
                 <Sections
                     tasks={tasks}
                     setDraggedTaskId={setDraggedTaskId}
@@ -45,7 +45,7 @@ export default function Theme2(props) {
             </div>
 
             {/* Completed Task */}
-            <div className="w-25 px-1">
+            <div className="col-sm-3 px-1">
                 <Completed completedTasks={completedTasks} />
             </div>
         </div>

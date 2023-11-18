@@ -4,25 +4,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { AllSection } from "../../Keys";
 import { Link, router, usePage } from "@inertiajs/react";
 import { faCircleCheck } from "@fortawesome/free-regular-svg-icons";
 
 export default function Task(props) {
     const { types } = usePage().props;
     const { task, draggedTaskId } = props;
-    const changeStatus = (id, section) => {
-        router.put(
-            `/todo/${id}`,
-            {
-                section: section,
-            },
-            {
-                preserveScroll: true,
-                only: ["tasks"],
-            }
-        );
-    };
 
     const [showCheck, setShowCheck] = useState({ id: null, show: false });
 
@@ -93,6 +80,7 @@ export default function Task(props) {
                                     style={
                                         task.type && {
                                             backgroundColor: task.type.color,
+                                            color: "#fff",
                                         }
                                     }
                                     className="btn dropdown-toggle py-0"

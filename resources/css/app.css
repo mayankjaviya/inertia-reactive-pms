@@ -1,0 +1,21 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.navbar, .task-card{
+    background-color: #bcc0c3;
+}
+
+.text-success , .navbar-success ,body{
+    color: #237373 !important;
+    font-weight: 500;
+}
+
+.navbar-brand{
+    color: #237373 !important;
+    font-weight: bolder;
+}
+
+.main-container{
+    background-color: #b5c9d842;
+}

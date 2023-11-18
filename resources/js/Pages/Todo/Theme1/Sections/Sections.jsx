@@ -23,7 +23,7 @@ export default function Sections(props) {
 
     return (
         <div
-            className="my-2 shadow shadow-md py-3"
+            className="my-2 shadow shadow-md py-3 task-card"
             onDrop={(event) => onDrop(event, section)}
             onDragOver={(event) => onDragOver(event)}
         >

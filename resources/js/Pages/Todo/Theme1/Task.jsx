@@ -92,6 +92,7 @@ export default function Task(props) {
                                 style={
                                     task.type && {
                                         backgroundColor: task.type.color,
+                                        color: "#fff",
                                     }
                                 }
                                 className="btn dropdown-toggle py-0"
